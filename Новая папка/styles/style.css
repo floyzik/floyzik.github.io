@@ -1,0 +1,499 @@
+*,:after,:before {
+    box-sizing: border-box;
+    border: 0 solid #e5e7eb
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#faq, #merch, #about {
+    scroll-margin-top: 15rem;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: #f1f1f1;
+}
+
+body.other header {
+    position: static;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "box-1"
+        "box-2"
+        "box-3";
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    grid-template-columns: 1fr;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.2s ease;
+    padding-top: 3.125rem;
+    box-sizing: border-box;
+}
+
+
+.nav, .foot-nav {
+    background-color: #151515;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav {
+    border-radius: 1.25rem;
+    margin: 0rem 3.125rem 3.125rem 3.125rem;
+    grid-template-columns: auto 1fr auto auto;
+}
+
+.foot-nav {
+    border-radius: 1.25rem 1.25rem 0rem 0rem;
+    grid-template-areas: 
+        "footer-box-1 footer-box-2 footer-box-3";
+
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.logo, .buy,
+.footer-logo, .footer-social,
+.button-music {
+    margin: 0 3.125rem;
+
+}
+.logo a, .buy a {
+    justify-content: center;
+    display: flex;
+    flex-shrink: 1;
+}
+
+.nav a, .foot-nav a,
+body.other .nav a, body.other .foot-nav {
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+    color: white;
+    font-family: "Unbounded", sans-serif;
+    text-align: center;
+    transition: 0.3s;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.foot-nav p, body.other .foot-nav p {
+    font-family: "Unbounded", sans-serif;
+    font-size: 10px;
+    color: rgb(93 93 98);
+    margin: auto auto 2px auto;
+}
+
+.button-music {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 3.125rem;
+    height: 3.125rem;
+    box-sizing: border-box;
+    flex-shrink: 1;
+}
+
+
+.button-music svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}
+
+.button-music.active .music-play {
+    opacity: 1;
+}
+
+.button-music.active .music-stop {
+    opacity: 0;
+}
+
+.music-play {
+    opacity: 0;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    flex-shrink: 1;
+    justify-content: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 450;
+    flex-wrap: nowrap;
+    gap: 3.125rem;
+    flex-shrink: 1;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    gap: 5px;
+    flex-shrink: 1;
+}
+
+.footer-social a {
+
+    font-size: 25px;
+}
+
+body.other main {
+    margin: 0 3.125rem;
+    background-color: white;
+    border-radius: 1.25rem;
+}
+
+main {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.middle .text {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0 1.25rem;
+    margin: 0;
+    font-size: 23px;
+}
+
+.middle {
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.photes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas:
+        "photobox-1 photobox-2"
+        "photobox-1 photobox-3";
+    gap: 1em;
+    padding: 1.25rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.merch-title {
+    font-size: 35px;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 1.25rem;
+    margin: 0;
+    text-align: center;
+}
+
+.merchandise {
+    margin: 1rem 0 10rem 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    grid-template-rows: auto;
+    align-items: start;
+    justify-items: center;
+}
+
+.ticket-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: inherit;
+}
+
+.ticket-image {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.ticket-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.ticket-desc {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin: 0 0 1rem 0;
+
+}
+
+.ticket-price {
+    font-family: "Unbounded", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #151515;
+    margin: 0.5rem 0 0 0;
+}
+
+.ticket-info h2 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #151515;
+    margin: 0 0 0.5rem 0;
+}
+
+ul {
+  width: 100vw;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 4vw;
+}
+li {
+
+  list-style-type: none;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  padding: 20px;
+
+  flex: 0 0 100%;
+}
+
+/* FAQ START */
+.faq-container {
+    box-sizing: border-box;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 1.25rem;
+    font-size: 25px;
+    font-family: "Unbounded", sans-serif;
+    margin: 0 3.125rem;
+}
+
+#faq-title {
+    margin-bottom: 2rem;
+}
+
+.faq-answers {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.faq-answer {
+    border-top: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+.faq-answer:last-child {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-answer-button {
+    width: 100%;
+    text-align: left;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-family: "Unbounded", sans-serif;
+    font-size: 1rem;
+    color: inherit;
+}
+
+.faq-answer-button:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.faq-answer-button span {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    transform: rotate(45deg); /* Изначально крестик (45°) */
+}
+
+.faq-answer-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.faq-answer-text p {
+    margin: 0;
+    padding: 0 0 20px 0;
+    line-height: 1.6;
+    margin-left: 0;
+}
+
+.faq-answer.active .faq-answer-text {
+    max-height: 500px;
+    opacity: 1;
+    padding-top: 10px;
+}
+
+.faq-answer.active .faq-answer-button span {
+    transform: rotate(0deg);
+}
+/* FAQ END */
+
+body.other .middle {
+    display: grid;
+    grid-template-areas: 
+        "main-box-1";
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.other .middle h1 {
+    text-align:justify;
+}
+
+footer {
+    width: 100%;
+    z-index: 500;
+    padding-top: 3.125rem;
+ position: relative;
+}
+
+.about-container {
+    background-color: #151515;
+    color: white;
+    padding: 150px 0;
+}
+
+.about {
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-left {
+    flex: 1;
+    position: relative;
+}
+
+    .about-left h2 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #cbb7ff; /* светло-фиолетовый как на примере */
+        font-family: "Unbounded", sans-serif;
+    }
+
+    .about-left .tag {
+        position: absolute;
+        top: -20px;
+        left: 120px;
+        width: 120px;
+    }
+
+.about-right {
+    flex: 1;
+    font-size: 24px;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.buy svg:hover, .button-music svg:hover, footer a:hover,
+header a:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.7));
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.7));
+    transition: 0.3s;
+}
+
+/* Easter Egg Styles */
+.easter-egg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+    flex-shrink: 1;
+}
+
+.easter-egg-gif {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
